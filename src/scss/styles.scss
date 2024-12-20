@@ -1,2 +1,51 @@
 // Import all of Bootstrap's CSS
 @use "bootstrap/scss/bootstrap";
+
+@use "colors";
+
+// Custom styles
+body {
+  background-color: colors.$primary-bg-color;
+  color: colors.$primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: colors.$secondary-color;
+}
+
+a {
+  color: colors.$primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: colors.$secondary-color;
+}
+
+.social-networks {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+
+    a {
+      font-size: 24px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
+}

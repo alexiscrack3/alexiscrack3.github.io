@@ -4,11 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devfolio</title>
+    <script
+      src="https://kit.fontawesome.com/2ec3a0522d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Webpack!</h1>
-      <button class="btn btn-primary">Primary button</button>
+    <div class="max-w-screen-xl vh-100 px-4 py-5">
+      <div class="d-flex flex-md-row flex-column row-gap-3 column-gap-3">
+        <header>
+          <div>
+            <h1>Alexis Ortega</h1>
+            <h2>Software Engineer</h2>
+            <p>I build amazing software for companies!</p>
+            <nav>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#experience">Experience</a></li>
+              <li><a href="/#projects">Projects</a></li>
+            </nav>
+          </div>
+          <div class="social-networks">
+            <ul>
+              <li>
+                <a href="https://github.com/alexiscrack3" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/alexiscrack3" target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li><a href="https://instagram.com/alexis.runner" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+            </ul>
+          </div>
+        </header>
+        <main>
+          <section id="about">
+            <h3 class="text-uppercase">About</h3>
+            <div>
+              <p class="mb-4">
+                I'm a software engineer with a passion for building web
+                applications and solving problems. I'm currently working at a
+                tech startup in San Francisco, where I'm building a platform to
+                help developers find remote jobs.
+              </p>
+              <p class="mb-4">
+                I'm always looking for new opportunities to learn and grow as a
+                developer. If you're interested in working together, feel free
+                to reach out to me on LinkedIn or Twitter.
+              </p>
+              <p class="mb-4">
+                When I'm not coding, you can find me hiking, reading, or playing
+                video games. I'm also a big fan of coffee and craft beer.
+              </p>
+            </div>
+          </section>
+          <section id="experience">
+            <h3 class="text-uppercase">Experience</h2>
+            <ol>
+              <li>
+                <div>
+                  <div class="job-experience-dates">
+                    <p>2022 - Present</p>
+                  </div>
+                  <div class="job-experience">
+                    <p>Shopify</p>
+                    <p>Build and maintain critical components.</p>
+                    <ul>
+                      <li>
+                        <div>Rails</div>
+                      </li>
+                      <li>
+                        <div>React</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div>
+              <a href="/">View Full Résumé</a>
+            </div>
+          </section>
+          <section id="projects"></section>
+          <footer>
+            <p>&copy; 2021 Alexis Ortega</p>
+          </footer>
+        </main>
+      </div>
     </div>
   </body>
 </html>
