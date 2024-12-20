@@ -48,16 +48,27 @@ ul {
   }
 }
 
-ol.experience-list {
-  padding: 0;
+.headline {
+  @extend .fs-2;
+  color: colors.$secondary-color;
+}
 
-  li {
+nav {
+  .nav-link {
+    @extend .text-uppercase;
     list-style-type: none;
+
+    &:active {
+      color: colors.$secondary-color;
+    }
+
+    &:hover {
+    }
   }
 }
 
-ul.social-networks {
-  li {
+.social-media-list {
+  .social-media-item {
     a {
       font-size: 24px;
 
@@ -72,11 +83,32 @@ ul.social-networks {
   }
 }
 
-ul.development-stack {
-  li {
-    &:not(:last-child) {
-      margin-right: 12px;
+.experience-list {
+  padding: 0;
+
+  .experience-item {
+    list-style-type: none;
+    margin-bottom: 32px;
+
+    .experience-content {
+      display: grid;
+      grid-template-columns: 1, auto;
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 25% auto;
+      }
     }
+  }
+}
+
+.skills {
+  @extend .d-flex, .flex-wrap, .row-gap-3, .column-gap-2;
+
+  span {
+    @extend .p-2, .rounded-pill;
+    background-color: rgb(45, 212, 191, 0.1);
+    color: colors.$accent-color;
+    font-size: 12px;
   }
 }
 
