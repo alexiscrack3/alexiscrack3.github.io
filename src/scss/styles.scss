@@ -3,7 +3,11 @@
 
 @use "colors";
 
-// Custom styles
+::selection {
+  background-color: colors.$accent-color;
+  color: colors.$primary-bg-color;
+}
+
 body {
   background-color: colors.$primary-bg-color;
   color: colors.$primary-color;
@@ -16,6 +20,14 @@ h4,
 h5,
 h6 {
   color: colors.$secondary-color;
+
+  a {
+    color: colors.$secondary-color;
+
+    &:hover {
+      color: colors.$secondary-color;
+    }
+  }
 }
 
 a {
@@ -24,24 +36,46 @@ a {
 }
 
 a:hover {
-  color: colors.$secondary-color;
+  color: colors.$accent-color;
 }
 
-.social-networks {
-  ul {
-    list-style: none;
-    padding: 0;
-  }
+ul {
+  list-style: none;
+  padding: 0;
 
   li {
     display: inline;
+  }
+}
 
+ol.experience-list {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+ul.social-networks {
+  li {
     a {
       font-size: 24px;
+
+      &:hover {
+        color: colors.$secondary-color;
+      }
     }
 
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 18px;
+    }
+  }
+}
+
+ul.development-stack {
+  li {
+    &:not(:last-child) {
+      margin-right: 12px;
     }
   }
 }
