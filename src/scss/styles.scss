@@ -116,7 +116,10 @@ section {
 
   .experience-item {
     list-style-type: none;
-    margin-bottom: 32px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
 
     .experience-content {
       display: grid;
@@ -128,6 +131,12 @@ section {
         grid-template-areas: "duration company";
       }
     }
+  }
+}
+
+.projects-list > .project {
+  &:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
