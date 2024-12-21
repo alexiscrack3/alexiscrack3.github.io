@@ -134,9 +134,15 @@ section {
   }
 }
 
-.projects-list > .project {
-  &:not(:last-child) {
-    margin-bottom: 32px;
+.projects-list {
+  padding: 0;
+
+  .project-item {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }
 
