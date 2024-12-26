@@ -53,7 +53,7 @@ ul {
   grid-template-columns: 1fr;
 
   @media screen and (min-width: 992px) {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2.5fr;
     grid-template-areas: "header devfolio";
     column-gap: 3em;
   }
@@ -120,28 +120,47 @@ section {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+  }
 
-    .experience-content {
-      display: grid;
-      column-gap: 1.5em;
-      grid-template-columns: 1fr;
+  .experience-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "employer"
+      "duration"
+      "projects";
 
-      @media screen and (min-width: 992px) {
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas: "duration company";
-      }
+    @media screen and (min-width: 576px) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "employer duration"
+        "projects projects";
     }
   }
-}
 
-.projects-list {
-  padding: 0;
+  .employer-name {
+    grid-area: employer;
+  }
 
-  .project-item {
-    list-style-type: none;
+  .employment-duration {
+    grid-area: duration;
+    text-align: left;
 
-    &:not(:last-child) {
-      margin-bottom: 32px;
+    @media screen and (min-width: 576px) {
+      text-align: right;
+    }
+  }
+
+  .projects-list {
+    grid-area: projects;
+    padding: 0;
+
+    .project-item {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
     }
   }
 }
